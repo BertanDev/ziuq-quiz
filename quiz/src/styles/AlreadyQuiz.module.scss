@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.questionContainer {
+    width: 60%;
+    height: 100%;
+    background-image: url('../assets/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.alternative:hover {
+    background-color: rgba(176, 176, 176, 0.65);
+    span {
+        color: #FFF;
+    }
+}
+
+.scoreboardContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.timer {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
+    span {
+        font-size: 2rem;
+        font-family: Andika;
+    }
+}
+
+.timerYellow {
+    border: 2px solid rgb(122, 104, 0);
+    animation: pulseYellow 1s ease infinite ;
+
+    span {
+        color: rgb(153, 138, 0);
+    }
+}
+
+.timerGreen {
+    border: 2px solid green;
+    animation: pulseGreen 1s ease infinite ;
+    
+    span {
+        color: green;
+    }
+}
+
+.timerRed {
+    border: 2px solid red;
+    animation: pulseRed 1s ease infinite ;
+
+    span {
+        color: red;
+    }
+}
+
+@keyframes pulseYellow {
+    0% {
+        border-color: rgb(255, 255, 0);
+    }
+
+    50% {
+        border-color: rgb(255, 255, 143);
+    }
+
+    100% {
+        border-color: rgb(255, 255, 207);
+    }
+}
+
+@keyframes pulseGreen {
+    0% {
+        border-color: green
+    }
+
+    50% {
+        border-color: rgb(67, 173, 67)
+    }
+
+    100% {
+        border-color: rgb(149, 209, 149)
+    }
+}
+
+@keyframes pulseRed {
+    0% {
+        border-color: red
+    }
+
+    50% {
+        border-color: rgb(255, 108, 108)
+    }
+
+    100% {
+        border-color: rgb(255, 152, 152)
+    }
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+    background-color: rgb(180, 180, 180);
+
+    span:first-child {
+        font-size: 1.2rem;
+        font-family: Andika;
+    }
+
+    span {
+        color: black;
+        font-size: 2rem;
+        font-family: Andika;
+    }
+}
+
+.timerScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.checked {
+    width: 1rem;
+    height: 1.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid;
+}
+
+.greenChecked {
+    background-color: green;
+}
+
+.redChecked {
+    background-color: red;
+}
+
+.checkedContainer {
+    display: flex;
+    gap: 0.5rem;
+}

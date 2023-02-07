@@ -1,0 +1,102 @@
+$color-button-green: #2ecc71;
+$font-size: 100%;
+$color-text: #ecf0f1;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #003785, #1465bb, #2196f3, #A555EC, #D09CFA );
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+    padding: 3rem;
+
+    h1 {
+      border: 1px solid #FFF;
+      padding: 0.5rem 1rem;
+      color: #FFF;
+      font-family: 'Rubik 80s Fade';
+    }
+
+    h2 {
+      font-family: Rubik Vinyl;
+      margin-top: 1rem;
+      margin-bottom: 10rem;
+    }
+
+    button {
+      border: 0;
+      min-width: 130px;
+      position: relative;
+      display: inline-block;
+
+      text-align: center;
+      text-transform: uppercase; 
+
+      padding: 15px;
+      margin: 30px 25px;
+
+      font-size: $font-size + 40%;
+      font-weight: 600;
+
+      color: $color-text;
+
+      transition: 0.5s;
+    }
+
+    button { background-color: $color-button-green; }
+
+    button:before {
+      position: absolute;
+      content:"";
+      border-top: 5px solid lighten($color-button-green, 5%);
+      border-left: 5px solid lighten($color-button-green, 5%);	
+      border-right: 5px solid darken($color-button-green, 5%);
+      border-bottom: 5px solid darken($color-button-green, 5%);
+
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;	
+
+      transition: 0.5s;
+    }
+
+    button:hover {
+      box-shadow: 7px 7px darken($color-button-green, 20%), -7px -7px lighten($color-button-green, 20%);
+      cursor: pointer;
+        &::before {
+        border: 0px ;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      color: #383838;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1d1d1d;
+    }
+}
+
+
+
+@keyframes colors {
+ 0% {
+    background-position: 0% 50%;
+ }
+
+ 50% {
+    background-position: 100% 50%;
+ }
+
+ 100% {
+    background-position: 0% 50%;
+ }
+}
