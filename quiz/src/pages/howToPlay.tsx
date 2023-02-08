@@ -1,5 +1,5 @@
 export default function HowToPlay(){
     return (
-        <h1>Como jogar</h1>
+        <h1>Como jogar o juguinho</h1>
     )
 }

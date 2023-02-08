@@ -23,7 +23,6 @@ export default function FinishedQuiz(){
 
           if (parts[0] === '/finishedQuiz') {
             event.preventDefault();
-            // Optional: redirect to another page
             router.push('/finishedQuiz');
           }
         };
@@ -36,10 +35,13 @@ export default function FinishedQuiz(){
     useEffect(() => {
         const storageScore = localStorage.getItem('score')
         const storageFinishDate = localStorage.getItem('finishDate')
+
+        console.log(storageScore)
         
         if(!storageScore && !storageFinishDate) {
             localStorage.setItem('score', stringScore)
             localStorage.setItem('finishDate', String(today))
+            setCurrentScore(stringScore)
             return
         }
 
