@@ -21,7 +21,7 @@ export default function Home() {
 
   const currentDate = dayjs()
 
-  console.log(finishDate, '-----', currentDate)
+  console.log(finishDate, '--- --', currentDate)
 
   if(dayjs(finishDate).isAfter(dayjs(currentDate), 'day')) {
     router.push({
