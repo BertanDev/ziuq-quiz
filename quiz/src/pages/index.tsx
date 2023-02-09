@@ -21,8 +21,9 @@ export default function Home() {
 
   const currentDate = dayjs()
 
+  console.log(finishDate, '-----', currentDate)
+
   if(dayjs(finishDate).isAfter(dayjs(currentDate), 'day')) {
-    console.log(finishDate, '-----', currentDate)
     router.push({
       pathname: '/finishedQuiz',
       query: {score: score}
