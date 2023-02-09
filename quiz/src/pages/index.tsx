@@ -27,6 +27,8 @@ export default function Home() {
       pathname: '/finishedQuiz',
       query: {score: score}
     })
+  } else {
+    localStorage.removeItem('score')
   }
 
   return (
