@@ -23,14 +23,25 @@ export default function Home() {
 
   console.log(finishDate, '--- --', currentDate)
 
-  if(dayjs(finishDate).isAfter(dayjs(currentDate), 'day')) {
+  if(dayjs(finishDate).isSame(currentDate, 'D')) {
     router.push({
       pathname: '/finishedQuiz',
       query: {score: score}
     })
-  } else {
-    localStorage.removeItem('score')
+
+    return
   }
+
+  function clearScore() {
+    () => localStorage.removeItem('score')
+  }
+
+  function clearFinishDate() {
+    () => localStorage.removeItem('finishDate')
+  }
+
+  clearScore()
+  clearFinishDate()
 
   return (
     <>
